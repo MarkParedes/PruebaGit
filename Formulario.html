@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admisi&oacute;n 2023</title>
+    <link rel="icon" type="image/png" href="escm.png">
+    <link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+	<script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+    <main>
+    <div class="container">
+		<div class="container mt-3">
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+			<h1>REGISTRO DE NUEVO INGRESO PERIODO 2023</h1>
+			<p class="fs-4">A continuaci&oacute;n solicitaremos la siguiente informaci&oacute;n</p>
+		</div>
+        </div>
+  
+	</div>
+        <br />
+    <div class="container">
+            <form class="formulario" action="" method="POST" id="formulario">
+
+                <div class="form-control">			        
+                    <h2>Identidad</h2>
+					 <br />
+                
+                <div class="row">
+                    <!--Grupo para nombre-->
+                    <div class="mb-3 mt-1 col-4">
+                        <div class="formulario__ grupo" id="grupo__nombre">
+                        <label for="nombre" class="formulario__label">Nombre(s):</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" name="nombre" class="formulario__input" placeholder="Ej. Luis Angel" id="nombre">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El nombre solo puede contener letras mayúsculas y minúsculas y espacios.</p>
+                        </div>
+                    </div> 
+                    <!--Grupo para apellido paterno-->
+                    <div class="mb-3 mt-1 col-4">
+                        <div class="formulario__grupo" id="grupo__apellidoP">
+                        <label for="apellidoP" class="formulario__label">Apellido paterno:</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" name="apellidoP" class="formulario__input" placeholder="Ej. Rangel" id="apellidoP">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El apellido solo puede contener letras mayúsculas y minúsculas y espacios.</p>
+                        </div>
+                    </div>
+                     <!--Grupo para apellido materno-->
+                    <div class="mb-3 mt-1 col-4">
+                        <div class="formulario__grupo" id="grupo__apellidoM">
+                        <label for="apellidoM" class="formulario__label">Apellido materno:</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" name="apellidoM" class="formulario__input" placeholder="Ej. Barcenas" id="apellidoM">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El apellido solo puede contener letras mayúsculas y minúsculas y espacios.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                     <!--Grupo para numero de boleta-->
+                    <div class="mb-3 mt-1 col-4">
+                        <div class="formulario__grupo" id="grupo__boleta">
+                        <label for="boleta" class="formulario__label">Numero de boleta:</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" name="boleta" class="formulario__input" placeholder="Ej. 2021630798" id="boleta">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El No. de boleta solo puede comtener las letras PE, PP y números (Máximo 12 caracteres).</p>
+                        </div>
+                    </div>
+                     <!--Grupo para fecha de nacimiento-->
+                    <div class="mb-3 mt-1 col-4">
+                        <div class="formulario__grupo" id="grupo__nacimiento">
+                        <label for="nacimiento" class="formulario__label">Fecha de nacimiento:</label>
+                            <div class="formulario__grupo-input">
+                                <input type="date" name="nacimiento" class="formulario__input" id="nacimiento">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                     <!--Grupo para curp-->
+                     <div class="mb-3 mt-1 col-4">
+                        <div class="formulario__grupo" id="grupo__curp">
+                        <label for="curp" class="formulario__label">CURP:</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" name="curp" class="formulario__input" placeholder="Ej. RABL021016HDFNRSA2" id="curp">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">La CURP debe contener 4 letras, seguida de 6 números, 6 letras y dos numeros, letras o combinacion de estos (Solo mayúsculas).</p>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <!--Grupo para discapacidad-->
+                    <div class="formulario__grupo" id="grupo__disc">
+                            <label for="disc" class="formulario__label">¿Posee alguna discapacidad?</label><br/> 
+                                  <div class="formulario__grupo-input">
+                                    <input type="radio" name="disc" id="disc_s" value="S" onchange="radiob()">S&iacute;
+                                    <input type="radio" name="disc" id="disc_n" value="N" onchange="radiob()">No<br> 
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i> 
+                                  </div>
+                                                          
+                        <br />  
+                        <div class="container" id="container_disca" hidden>
+                            <div class="mb-3 mt-1 col-4">
+                                <label for="Disca" class="formulario__label">Discapacidad:</label>
+                                <select class="form-select" name="Disca" id="Disca_p" ><br>
+                                    <option align="center" value=""> -- Seleccionar-- </option>
+                                    <option value="Disc1">F&iacute;sica</option> 
+                                    <option value="Disc2">Intelectual</option>
+                                    <option value="Disc3">Mental</option>
+                                    <option value="Disc4">Psicosocial</option>
+                                    <option value="Disc5">Sensorial</option>
+                                    <option value="Disc6">Auditiva</option>
+                                    <option value="Disc7">Visual</option>
+                                    <option value="Disc8">M&uacute;ltiple</option>
+                                </select>							
+                            </div>
+                        </div>
+                    </div>  
+                </div> 
+                <br />    
+                <br />
+
+                <div class="form-control">			        
+                    <h3>Contacto</h3>
+					 <br />
+                
+                <div class="row">
+                    <!--Grupo para telefono-->
+                    <div class="mb-3 mt-1 col-4">
+                        <div class="formulario__grupo" id="grupo__telefono">
+                        <label for="telefono" class="formulario__label">No. de telefono</label>
+                            <div class="formulario__grupo-input">
+                                <input type="tel" name="telefono" class="formulario__input" placeholder="Ej. 5587831566" id="telefono">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El numero de telefono solo puede contener números (Máximo 12).</p>
+                        </div>
+                    </div>
+                    <!--Grupo para correo-->
+                    <div class="mb-3 mt-1 col-4">
+                        <div class="formulario__grupo" id="grupo__correo">
+                        <label for="correo" class="formulario__label">Correo electronico</label>
+                            <div class="formulario__grupo-input">
+                                <input type="email" name="correo" class="formulario__input" placeholder="Ej. luisuberaco2002@gmail.com" id="correo">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El correo electronico debe contener el simbolo @.</p>
+                        </div>
+                    </div>
+
+                </div>   
+                </div> 
+                <br />    
+                <br />
+
+                <div class="form-control">			        
+                    <h3>Procedencia</h3>
+					 <br />
+                
+                    <!--Grupo para escuela de procedencia-->
+                    <div class="mb-3 mt-1 col-12">
+                        <div class="formulario__grupo" id="grupo__escu">
+                        <label for="escu" class="formulario__label">Nombre del plantel:</label>
+                        <select class="form-select" name="Escu" id="Escu" onchange="operacion()" required><br>
+                            <option align="center" value=""> -- Seleccionar-- </option>
+                            <option value="Cecyt1">CECyT 1 Gonzalo Vázquez Vela</option> 
+                            <option value="Cecyt2">CECyT 2 Miguel Bernard Perales</option> 
+                            <option value="Cecyt3">CECyT 3 Estanislao Ramírez Ruiz</option> 
+                            <option value="Cecyt4">CECyT 4 Lázaro Cárdenas del Río</option> 
+                            <option value="Cecyt5">CECyT 5 Benito Juárez</option> 
+                            <option value="Cecyt6">CECyT 6 Miguel Othon de Mendizábal</option>
+                            <option value="Cecyt7">CECyT 7 Cuauhtémoc</option>
+                            <option value="Cecyt8">CECyT 8 Narciso Bassols</option> 
+                            <option value="Cecyt9">CECyT 9 Juan de Dios Bátiz Paredes</option> 
+                            <option value="Cecyt10">CECyT 10 Carlos Vallejo Márquez</option> 
+                            <option value="Cecyt11">CECyT 11 Wilfrido Massieu</option> 
+                            <option value="Cecyt12">CECyT 12 José María Morelos</option> 
+                            <option value="Cecyt13">CECyT 13 Ricardo Flores Magón</option> 
+                            <option value="Cecyt14">CECyT 14 Luis Enrique Erro Soler</option> 
+                            <option value="Cecyt15">CECyT 15 Diódoro Antúnez Echegaray</option> 
+                            <option value="Cecyt16">CECyT 16 Hidalgo</option> 
+                            <option value="Cecyt17">CECyT 17 León - Guanajuato</option> 
+                            <option value="Cecyt18">CECyT 18 - Zacatecas</option> 
+                            <option value="Cecyt19">CECyT 19 Leona Vicario </option> 
+                            <option value="Cet 1 ">CET 1 Walter Cross Buchanan</option> 
+							<option value="0">Otro</option> 
+                        </select> 
+					 <div class="container" id="container_otros" hidden>
+					 <div class="mb-3 mt-1 col-6">
+                        <div class="formulario__grupo" id="grupo__OtroP">
+                        <label for="OtroP" class="OtroP">Otro Plantel:</label>
+                        <div class="formulario__grupo-input">
+                        <input type="text" name="OtroP" class="formulario__input" placeholder="Ej. Prepa 9" id="OtroP" >
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                    <p class="formulario__input-error">Escriba el nombre de su escuela. Puede usar letras mayusculas y minusculas.</p>
+                </div>
+                    </div>
+					</div>
+                    </div>
+                </div>
+                <!--Grupo para entidad federativa-->
+                    <div class="mb-3 mt-1 col-12">
+                        <div class="formulario__grupo" id="grupo__ent">
+                        <label for="ent" class="formulario__label">Entidad Federativa:</label>
+                        <select class="form-select" name="Ent" id="Ent" required><br>
+                            <option align = "center" value = ""> -- Seleccionar-- </option>
+                            <option value="Entidad">Aguascalientes </option> 
+                            <option value="Entidad">Baja California</option> 
+                            <option value="Entidad">Baja California Sur</option> 
+                            <option value="Entidad">Campeche </option> 
+                            <option value="Entidad">Chiapas    </option> 
+                            <option value="Entidad">Chihuahua</option> 
+                            <option value="Entidad">Ciudad de México</option> 
+                            <option value="Entidad">Coahuila</option> 
+                            <option value="Entidad">Colima</option> 
+                            <option value="Entidad">Durango</option> 
+                            <option value="Entidad">Estado de México</option> 
+                            <option value="Entidad">Guanajuato</option> 
+                            <option value="Entidad">Guerrero</option> 
+                            <option value="Entidad">Hidalgo</option> 
+                            <option value="Entidad">Jalisco</option> 
+                            <option value="Entidad">Michoacán</option> 
+                            <option value="Entidad">Morelos</option> 
+                            <option value="Entidad">Nayarit</option> 
+                            <option value="Entidad">Nuevo León </option> 
+                            <option value="Entidad">Oaxaca</option> 
+                            <option value="Entidad">Puebla</option> 
+                            <option value="Entidad">Querétaro </option> 
+                            <option value="Entidad">Quintana Roo</option> 
+                            <option value="Entidad">San Luis Potosí  </option> 
+                            <option value="Entidad">Sinaloa</option> 
+                            <option value="Entidad">Sonora</option> 
+                            <option value="Entidad">Tabasco  </option> 
+                            <option value="Entidad"> Tamaulipas</option> 
+                            <option value="Entidad">Tlaxcala </option> 
+                            <option value="Entidad">Veracruz</option> 
+                            <option value="Entidad">Yucatán</option> 
+                            <option value="Entidad">Zacatecas</option> 
+                        </select>
+                    </div>
+                    </div>
+                    <!--Grupo para el promedio-->
+                    <div class="mb-3 mt-1 col-4">
+                        <div class="formulario__grupo" id="grupo__promedio">
+                        <label for="promedio" class="formulario__label">Promedio:</label>
+                            <div class="formulario__grupo-input">
+                                <input type="number" name="promedio" class="formulario__input" placeholder="Ej. 9.99" step="0.01" id="promedio">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El promedio solo acepta numeros entre el 0 y el 10 con dos decimales.</p>
+                        </div>
+                    </div>
+                   
+                </div> 
+                <br />    
+                <br />
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i><b> Error: </b>Rellena el formulario correctamente.</p>
+                </div>
+                <br><br>
+
+                    <div class="formulario__grupo-btn" id="formulario__grupo-btn">
+                        <div class="formulario__grupo formulario__grupo-btn-registrar">
+                        <button type="submit" class="formulario__btn" onclick="miAlerta()">Registrar</button>   
+                        </div>
+                    
+                        <div class="formulario__grupo formulario__grupo-btn-limpiar">
+                        <button type="reset" class="formulario__btn">Limpiar</button>
+                        </div>
+					</div>
+                                     
+                
+            </form>
+    <?php
+    include("Conexion.php");
+    ?>
+    </div>
+    </main>
+    <script src="validacion.js" type="text/javascript" ></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
